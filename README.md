@@ -13,7 +13,7 @@ En el repositorio podrán encontrar todos los archivos que generamos para el pro
 
 - [Aplicación Móvil](/AplicaciónMovil).
 - [Codigos de las Bases de Datos](/CodigosABasesDeDatos).
-- [Daigrama Entidad Relación](/DiagramaEntidadRelaciónAlertaParati.pdf).
+- [Daigrama Entidad Relación](/Diagrama Entidad Relación Alerta Para ti.pdf).
 - [Diagrama de Casos de Uso](/DiagramaCasosDeUso.png).
 - [Pagina Web](/PaginaWeb.txt).
 
