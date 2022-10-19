@@ -17,14 +17,14 @@ En el repositorio podrán encontrar todos los archivos que generamos para el pro
 - [Diagrama de Casos de Uso](/DiagramaCasosDeUso.png).
 - [Pagina Web](/PaginaWeb.txt).
 
-## Tech Stack
+## Stack tecnológico 
 **Aplicación Móvil:** Android Studio
 
 **Aplicación Web:** Oracle APEX
 
 **Base de Datos:** Azure SQL
 
-**Data Warehouse:** Oracle Autonomous
+**Almacen de Datos (Data Warehouse):** Oracle Autonomous
 
 **App Service:** Azure
 
