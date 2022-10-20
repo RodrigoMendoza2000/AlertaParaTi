@@ -4,39 +4,64 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import mx.itesm.gfg.alertaparati.databinding.FragmentHomeBinding
+import mx.itesm.gfg.alertaparati.model.MandaDatosBD
 
 class HomeFragment : Fragment() {
 
-    private var _binding: FragmentHomeBinding? = null
+    // Clase para mandar datos a la base de datos
+    private var mandaDatosBD = MandaDatosBD()
 
-    // This property is only valid between onCreateView and
-    // onDestroyView.
-    private val binding get() = _binding!!
+    private lateinit var binding: FragmentHomeBinding
+
 
     override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
+        inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val homeViewModel =
-            ViewModelProvider(this).get(HomeViewModel::class.java)
+        binding = FragmentHomeBinding.inflate(layoutInflater)
+        return binding.root
+    }
 
-        _binding = FragmentHomeBinding.inflate(inflater, container, false)
-        val root: View = binding.root
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        registrarEventos()
+    }
 
-        val textView: TextView = binding.textHome
-        homeViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
+    override fun onStart() {
+        super.onStart()
+        mandaDatosBD.mandarDatosFragmento("Home")
+    }
+
+    private fun registrarEventos() {
+
+        binding.btnImgClima.setOnClickListener {
+            mandaDatosBD.mandarDatosFragmento("Clima")
+            val accion = HomeFragmentDirections.actionNavigationHomeToFragmentClima()
+            findNavController().navigate(accion)
         }
-        return root
+        binding.btnAlertas.setOnClickListener {
+            mandaDatosBD.mandarDatosFragmento("Alarmas")
+            val accion = HomeFragmentDirections.actionNavigationHomeToTerremoto()
+            findNavController().navigate(accion)
+        }
+        binding.btnEstaciones.setOnClickListener {
+            mandaDatosBD.mandarDatosFragmento("Estaciones")
+            val accion = HomeFragmentDirections.actionNavigationHomeToEstacionesPolicias()
+            findNavController().navigate(accion)
+        }
+        binding.btnTrafico.setOnClickListener {
+            mandaDatosBD.mandarDatosFragmento("Tráfico")
+            val accion = HomeFragmentDirections.actionNavigationHomeToTrafico()
+            findNavController().navigate(accion)
+        }
+        binding.fab.setOnClickListener {
+            val accion = HomeFragmentDirections.actionNavigationHomeToFragmentCreditos()
+            findNavController().navigate(accion)
+        }
+
     }
 
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
-    }
 }

@@ -5,7 +5,7 @@ import random
 paginas = ['Home', 'Noticias', 'Notificaciones', 'Clima', 
            'Tráfico', 'Estaciones', 'Alarmas', 'SOS', 'Bot']
 
-fechas = ['2022-10-03', '2022-10-04', '2022-10-05', '2022-10-06', '2022-10-07', '2022-10-08', '2022-10-09']
+fechas = ['2022-10-17', '2022-10-18', '2022-10-19', '2022-10-20', '2022-10-21', '2022-10-22', '2022-10-23']
 
 
 azure = AzureDB(server, database, username, password, driver)

@@ -3,28 +3,121 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_home">
+    app:startDestination="@id/navigation_home">
 
     <fragment
         android:id="@+id/navigation_home"
         android:name="mx.itesm.gfg.alertaparati.ui.home.HomeFragment"
         android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_home_to_fragment_clima"
+            app:destination="@id/fragment_clima" />
+        <action
+            android:id="@+id/action_navigation_home_to_trafico"
+            app:destination="@id/trafico" />
+        <action
+            android:id="@+id/action_navigation_home_to_estacionesPolicias"
+            app:destination="@id/estacionesPolicias" />
+        <action
+            android:id="@+id/action_navigation_home_to_notificaciones"
+            app:destination="@id/notificaciones" />
+        <action
+            android:id="@+id/action_navigation_home_to_terremoto"
+            app:destination="@id/FragmentSismo" />
+        <action
+            android:id="@+id/action_navigation_home_to_fragmentCreditos"
+            app:destination="@id/fragmentCreditos" />
+    </fragment>
 
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="mx.itesm.gfg.alertaparati.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
+        android:id="@+id/navigation_sos"
+        android:name="mx.itesm.gfg.alertaparati.ui.dashboard.SosFragment"
+        android:label="@string/title_SOS"
         tools:layout="@layout/fragment_sos" />
 
     <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="mx.itesm.gfg.alertaparati.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_bot" />
+        android:id="@+id/navigation_bot"
+        android:name="mx.itesm.gfg.alertaparati.FragmentNoticias"
+        android:label="@string/title_AtizaBot" />
     <activity
         android:id="@+id/activity_carga"
         android:name="mx.itesm.gfg.alertaparati.activity_carga"
-        android:label="activity_carga"
+        android:label="Login"
         tools:layout="@layout/activity_carga" />
+    <fragment
+        android:id="@+id/fragment_clima"
+        android:name="mx.itesm.gfg.alertaparati.fragment_clima"
+        android:label="Clima"
+        tools:layout="@layout/fragment_clima" />
+    <fragment
+        android:id="@+id/trafico"
+        android:name="mx.itesm.gfg.alertaparati.FragmentTrafico"
+        android:label="Tráfico"
+        tools:layout="@layout/fragment_trafico" >
+        <action
+            android:id="@+id/action_trafico_to_fragmentMapaIncidente"
+            app:destination="@id/fragmentMapa" />
+    </fragment>
+    <fragment
+        android:id="@+id/estacionesPolicias"
+        android:name="mx.itesm.gfg.alertaparati.EstacionesPolicias"
+        android:label="Estaciones"
+        tools:layout="@layout/fragment_estaciones_policias" />
+    <fragment
+        android:id="@+id/alertasFragment"
+        android:name="mx.itesm.gfg.alertaparati.AlertasFragment"
+        android:label="Alertas"
+        tools:layout="@layout/fragment_alertas" >
+        <action
+            android:id="@+id/action_alertasFragment_to_incendios"
+            app:destination="@id/incendios" />
+    </fragment>
+    <fragment
+        android:id="@+id/FragmentSismo"
+        android:name="mx.itesm.gfg.alertaparati.FragmentSismo"
+        android:label="fragment_terremoto" >
+        <action
+            android:id="@+id/action_FragmentSismo_to_fragmentMapaSismo"
+            app:destination="@id/fragmentMapaSismo" />
+    </fragment>
+    <fragment
+        android:id="@+id/incendios"
+        android:name="mx.itesm.gfg.alertaparati.incendios"
+        android:label="fragment_incendios"
+        tools:layout="@layout/fragment_incendios" />
+    <fragment
+        android:id="@+id/notificaciones"
+        android:name="mx.itesm.gfg.alertaparati.notificaciones"
+        android:label="Notificaciones"
+        tools:layout="@layout/fragment_notificaciones" />
+    <fragment
+        android:id="@+id/fragmentMapa"
+        android:name="mx.itesm.gfg.alertaparati.FragmentMapaIncidente"
+        android:label="fragment_mapa"
+        tools:layout="@layout/fragment_mapa_incidente" >
+        <argument
+            android:name="idIncidente"
+            app:argType="string" />
+        <argument
+            android:name="color"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentCreditos"
+        android:name="mx.itesm.gfg.alertaparati.FragmentCreditos"
+        android:label="fragment_creditos"
+        tools:layout="@layout/fragment_creditos" />
+    <fragment
+        android:id="@+id/fragmentMapaSismo"
+        android:name="mx.itesm.gfg.alertaparati.FragmentMapaSismo"
+        android:label="fragment_mapa_sismo"
+        tools:layout="@layout/fragment_mapa_sismo" >
+        <argument
+            android:name="latitud"
+            app:argType="float" />
+        <argument
+            android:name="longitud"
+            app:argType="float" />
+    </fragment>
 </navigation>
