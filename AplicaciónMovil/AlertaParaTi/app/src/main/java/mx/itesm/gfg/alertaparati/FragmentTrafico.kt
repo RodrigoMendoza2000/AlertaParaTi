@@ -7,13 +7,12 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
-import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import mx.itesm.gfg.alertaparati.ViewModel.ListaIncidentesVM
 import mx.itesm.gfg.alertaparati.databinding.FragmentTraficoBinding
 import mx.itesm.gfg.alertaparati.model.Incidente
 import mx.itesm.gfg.alertaparati.view.AdaptadorIncidente
-import mx.itesm.gfg.alertaparati.view.ListenerRecyclerIncidente
+import mx.itesm.gfg.alertaparati.Model.ListenerRecyclerIncidente
 
 
 class FragmentTrafico : Fragment(), ListenerRecyclerIncidente {

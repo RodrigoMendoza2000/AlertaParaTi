@@ -12,12 +12,11 @@ import androidx.recyclerview.widget.LinearLayoutManager
 
 import mx.itesm.gfg.alertaparati.ViewModel.ListaSismoVM
 import mx.itesm.gfg.alertaparati.databinding.FragmentSismoBinding
-import mx.itesm.gfg.alertaparati.model.Incidente
 import mx.itesm.gfg.alertaparati.model.Sismo
 import mx.itesm.gfg.alertaparati.view.AdaptadorSismo
-import mx.itesm.gfg.alertaparati.view.ListenerRecyclerSismo
+import mx.itesm.gfg.alertaparati.Model.ListenerRecyclerSismo
 
-class FragmentSismo : Fragment(), ListenerRecyclerSismo{
+class FragmentSismo : Fragment(), ListenerRecyclerSismo {
 
     // binding
     private lateinit var binding : FragmentSismoBinding

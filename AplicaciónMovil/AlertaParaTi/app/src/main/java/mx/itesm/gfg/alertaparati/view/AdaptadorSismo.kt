@@ -7,9 +7,9 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import mx.itesm.gfg.alertaparati.Model.ListenerRecyclerSismo
 import mx.itesm.gfg.alertaparati.R
 import mx.itesm.gfg.alertaparati.model.Sismo
-import kotlin.properties.Delegates
 
 class AdaptadorSismo (val context: Context,
                       var arrSismos: Array<Sismo>):

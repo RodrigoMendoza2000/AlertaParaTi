@@ -8,6 +8,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import mx.itesm.gfg.alertaparati.Model.ListenerRecyclerIncidente
 import mx.itesm.gfg.alertaparati.R
 import mx.itesm.gfg.alertaparati.model.Incidente
 
