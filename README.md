@@ -11,7 +11,7 @@ En el repositorio podrán encontrar todos los archivos que generamos para el pro
 
 ## Tabla de contenido
 
-- [Aplicación Móvil](/AplicaciónMovil).
+- [Aplicación Móvil](/AlertaParaTi.zip).
 - [Codigos de las Bases de Datos](/CodigosABasesDeDatos).
 - [Daigrama Entidad Relación](/DiagramaEntidadRelacionAlertaParaTi.pdf).
 - [Diagrama de Casos de Uso](/DiagramaCasosDeUso.png).
